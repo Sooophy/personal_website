@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Developer</title>
+    <title>Yi Sophie Shi - PhD Candidate</title>
     <style>
         /* ===== CSS VARIABLES MODULE - Design Tokens ===== */
         :root {
@@ -218,12 +218,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: var(--accent-yellow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--primary-blue);
+            object-fit: cover;
             margin: 0 auto;
             box-shadow: 0 20px 40px var(--shadow);
         }
@@ -254,29 +249,76 @@
             background: var(--accent-yellow);
         }
 
-        /* ===== ABOUT SECTION MODULE ===== */
+        /* ===== ABOUT SECTION MODULE - POLAROID LAYOUT ===== */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
         }
 
-        .about-image {
-            text-align: center;
-        }
-
-        .about-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 10px;
-            background: var(--light-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary-blue);
+        .about-image-gallery {
+            position: relative;
+            width: 100%;
+            height: 400px;
             margin: 0 auto;
+        }
+
+        .polaroid-photo {
+            position: absolute;
+            background: white;
+            padding: 1rem 1rem 2rem 1rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform-origin: center;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .polaroid-photo img {
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .polaroid-photo:hover {
+            transform: scale(1.05) !important;
+            z-index: 10;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .polaroid-photo::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-5deg);
+            width: 40px;
+            height: 20px;
+            background: #ff6b35;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .photo-1 {
+            top: 0;
+            left: 5 px;
+            transform: rotate(-8deg);
+            z-index: 3;
+        }
+
+        .photo-2 {
+            top: 70px;
+            right:5px;
+            transform: rotate(12deg);
+            z-index: 2;
+        }
+
+        .photo-3 {
+            bottom: 0px;
+            left: 50px;
+            transform: rotate(-3deg);
+            z-index: 1;
         }
 
         .about-text p {
@@ -641,6 +683,21 @@
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 3rem;
+            }
+
+            .about-image-gallery {
+                order: 1;
+                height: 300px;
+            }
+
+            .about-text {
+                order: 2;
+            }
+
+            .polaroid-photo img {
+                width: 90px;
+                height: 120px;
             }
 
             .contact-content {
@@ -676,7 +733,7 @@
     <!-- ===== HEADER/NAVIGATION MODULE ===== -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">Yi "Sophie" Shi</div>
+            <div class="logo">Yi Sophie Shi</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -720,7 +777,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="profile-img">👨‍💻</div>
+                <img src="images/profile_photo.jpg" alt="Sophie Shi" class="profile-img">
             </div>
         </div>
     </section>
@@ -729,9 +786,19 @@
     <section id="about" class="section fade-in">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <div class="about-image">
-                <div class="about-img">🚀</div>
+            <!-- *** POLAROID-STYLE PHOTO GALLERY - HIGHLIGHTED FOR CUSTOMIZATION *** -->
+            <div class="about-image-gallery">
+                <div class="polaroid-photo photo-1">
+                    <img src="images/rock.jpg" alt="Sophie Shi Professional">
+                </div>
+                <div class="polaroid-photo photo-2">
+                    <img src="images/craft.jpg" alt="Sophie in Research Lab">
+                </div>
+                <div class="polaroid-photo photo-3">
+                    <img src="images/hiking.jpg" alt="Sophie Rock Climbing">
+                </div>
             </div>
+            
             <div class="about-text">
                 <p>I'm a <span class="highlight">PhD candidate in Biomedical Engineering at Duke University</span>, driven by a mission to revolutionize healthcare through artificial intelligence. With a Master's in Biomedical Engineering from Duke and a Bachelor's in Bioengineering from Zhejiang University, I specialize in bridging cutting-edge AI technology with critical medical applications.</p>
                 
@@ -791,11 +858,11 @@
             <div class="project-card fade-in">
                 <div class="project-header">
                     <h3 class="project-title">Auto-evaluation System for Epilepsy Based on Videos</h3>
-                    <p class="project-tech">Computer Vision • 2D Pose Estimation • LLM Integration</p>
+                    <p class="project-tech">Computer Vision • 3D Pose Estimation • LLM Integration</p>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
-                        Developing computer vision-based pipeline using 2D pose estimation models for automated semiology detection in clinical video data. Building a multi-modal system that integrates pose estimation, imaging processing and large language model to predict surgery outcome.
+                        Developing computer vision-based pipeline using pose estimation models for automated semiology detection in clinical video data. Building a multi-modal system that integrates pose estimation, imaging processing and large language model to predict surgery outcome.
                     </p>
                     <div class="project-links">
                         <a href="epilepsy-auto-evaluation.html" class="project-link link-github">Details</a>
@@ -807,7 +874,7 @@
             <div class="project-card fade-in">
                 <div class="project-header">
                     <h3 class="project-title">Deep Learning for Post-Stroke Behavioral Analysis</h3>
-                    <p class="project-tech">DANNCE • 3D Neural Networks • Computational Ethology</p>
+                    <p class="project-tech">Computer Vision • 3D Pose Estimation • Computational Ethology</p>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
@@ -823,7 +890,7 @@
             <div class="project-card fade-in">
                 <div class="project-header">
                     <h3 class="project-title">CNN-based Epilepsy Seizure Prediction</h3>
-                    <p class="project-tech">ResNet • EEG Analysis • Neural Networks</p>
+                    <p class="project-tech">Data Compression • Deep Learning • EEG Analysis</p>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
@@ -890,11 +957,11 @@
             <!-- *** PUBLICATION 2 - ADVANCED FUNCTIONAL MATERIALS - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="publication-item fade-in">
                 <div class="publication-content">
-                    <h3 class="publication-title">Angiogenic therapy via HA scaffolds</h3>
+                    <h3 class="publication-title">Delivery of Angiogenic Therapy from Flowable Hyaluronic Acid Porous Scaffolds Results in Functional Improvement without Anti-Inflammatory Agents</h3>
                     <p class="publication-authors">Erning K, Wilson KL, et al., <strong>Shi Y</strong>, et al.</p>
                     <p class="publication-journal">Advanced Functional Materials, 2025</p>
                     <p class="publication-description">
-                        Co-authored research on angiogenic therapy applications using hyaluronic acid scaffolds for tissue engineering applications.
+                        Co-authored research on angiogenic therapy applications using hyaluronic acid scaffolds for tissue engineering applications. Contributed to the treatment effect evaluation.
                     </p>
                 </div>
                 <div class="publication-status published">Published</div>
@@ -903,7 +970,7 @@
             <!-- *** PUBLICATION 3 - IEEE TRANSACTIONS - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="publication-item fade-in">
                 <div class="publication-content">
-                    <h3 class="publication-title">C2SP-Net: Compression/classification for epilepsy</h3>
+                    <h3 class="publication-title">C2SP-Net: Joint Compression and Classification Network for Epilepsy Seizure Prediction</h3>
                     <p class="publication-authors">Wu D, <strong>Shi Y</strong>, et al.</p>
                     <p class="publication-journal">IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2023</p>
                     <p class="publication-description">
