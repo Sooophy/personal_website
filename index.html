@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yi Sophie Shi - PhD Candidate</title>
+    <title>Sophie Shi - PhD Candidate</title>
     <style>
         /* ===== CSS VARIABLES MODULE - Design Tokens ===== */
         :root {
@@ -249,76 +249,31 @@
             background: var(--accent-yellow);
         }
 
-        /* ===== ABOUT SECTION MODULE - POLAROID LAYOUT ===== */
+        /* ===== ABOUT SECTION MODULE - SINGLE PHOTO ===== */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 250px 1fr;
             gap: 4rem;
             align-items: start;
         }
 
-        .about-image-gallery {
-            position: relative;
+        .about-image {
+            text-align: center;
+        }
+
+        .about-narrow-img {
             width: 100%;
-            height: 400px;
-            margin: 0 auto;
-        }
-
-        .polaroid-photo {
-            position: absolute;
-            background: white;
-            padding: 1rem 1rem 2rem 1rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transform-origin: center;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .polaroid-photo img {
-            width: 120px;
-            height: 160px;
+            max-width: 250px;
+            height: 350px;
+            border-radius: 15px;
             object-fit: cover;
-            display: block;
+            box-shadow: 0 10px 25px var(--shadow);
+            transition: var(--transition);
         }
 
-        .polaroid-photo:hover {
-            transform: scale(1.05) !important;
-            z-index: 10;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-        }
-
-        .polaroid-photo::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%) rotate(-5deg);
-            width: 40px;
-            height: 20px;
-            background: #ff6b35;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .photo-1 {
-            top: 0;
-            left: 5 px;
-            transform: rotate(-8deg);
-            z-index: 3;
-        }
-
-        .photo-2 {
-            top: 70px;
-            right:5px;
-            transform: rotate(12deg);
-            z-index: 2;
-        }
-
-        .photo-3 {
-            bottom: 0px;
-            left: 50px;
-            transform: rotate(-3deg);
-            z-index: 1;
+        .about-narrow-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px var(--shadow);
         }
 
         .about-text p {
@@ -686,18 +641,17 @@
                 gap: 3rem;
             }
 
-            .about-image-gallery {
+            .about-image {
                 order: 1;
-                height: 300px;
             }
 
             .about-text {
                 order: 2;
             }
 
-            .polaroid-photo img {
-                width: 90px;
-                height: 120px;
+            .about-narrow-img {
+                max-width: 200px;
+                height: 280px;
             }
 
             .contact-content {
@@ -733,7 +687,7 @@
     <!-- ===== HEADER/NAVIGATION MODULE ===== -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">Yi Sophie Shi</div>
+            <div class="logo">Yi "Sophie" Shi</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -750,8 +704,8 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span class="typewriter">Sophie Shi</span></h1>
-                <p class="subtitle">PhD Candidate • AI Healthcare Researcher</p>
-                <p>I'm revolutionizing healthcare through artificial intelligence, specializing in computer vision and 3D pose estimation for automated epilepsy diagnostics. Based at Duke University in Durham, NC, I develop AI systems that transform routine medical recordings into intelligent diagnostic tools.</p>
+                <p class="subtitle">PhD Candidate • AI Health Researcher</p>
+                <p>I'm revolutionizing healthcare through artificial intelligence, specializing in computer vision and 3D pose estimation for automated epilepsy diagnostics. Based at Duke University, I develop AI systems that transform routine medical recordings into intelligent diagnostic tools.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -761,7 +715,7 @@
                 <div class="hero-social-links">
                     <a href="https://github.com/Sooophy" class="hero-social-link" title="GitHub">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
                     <a href="https://www.linkedin.com/in/sophie-shi-4653301a6/" class="hero-social-link" title="LinkedIn">
@@ -786,27 +740,19 @@
     <section id="about" class="section fade-in">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <!-- *** POLAROID-STYLE PHOTO GALLERY - HIGHLIGHTED FOR CUSTOMIZATION *** -->
-            <div class="about-image-gallery">
-                <div class="polaroid-photo photo-1">
-                    <img src="images/rock.jpg" alt="Sophie Shi Professional">
-                </div>
-                <div class="polaroid-photo photo-2">
-                    <img src="images/craft.jpg" alt="Sophie in Research Lab">
-                </div>
-                <div class="polaroid-photo photo-3">
-                    <img src="images/hiking.jpg" alt="Sophie Rock Climbing">
-                </div>
+            <!-- *** SINGLE PHOTO - HIGHLIGHTED FOR CUSTOMIZATION *** -->
+            <div class="about-image">
+                <img src="images/climb.jpg" alt="Sophie Shi" class="about-narrow-img">
             </div>
             
             <div class="about-text">
-                <p>I'm a <span class="highlight">PhD candidate in Biomedical Engineering at Duke University</span>, driven by a mission to revolutionize healthcare through artificial intelligence. With a Master's in Biomedical Engineering from Duke and a Bachelor's in Bioengineering from Zhejiang University, I specialize in bridging cutting-edge AI technology with critical medical applications.</p>
+                <p>I'm a <span class="highlight">PhD candidate in Biomedical Engineering in Tim Dunn Lab at Duke University</span>, driven by a mission to revolutionize healthcare through artificial intelligence.</p>
                 
                 <p>My research focuses on developing <span class="highlight">automated epilepsy diagnostic tools</span> using computer vision and 3D pose estimation from standard clinical videos. I've created systems that detect subtle seizure-related movement patterns invisible to clinical observation, transforming routine medical recordings into intelligent diagnostic tools. Working closely with Duke's premier clinical teams, I also architect medical software platforms that integrate patient databases with AI-powered diagnostic systems for seamless clinical deployment.</p>
                 
-                <p>I'm passionate about pushing the boundaries of <span class="highlight">AI in healthcare</span>—where every algorithm has the potential to save lives and every innovation can make a meaningful difference in patient outcomes.</p>
+                <p>I'm driven to <span class="highlight">leverage AI for meaningful healthcare impact</span> — where every algorithm has the potential to save lives and every innovation can make a meaningful difference in patient outcomes.</p>
                 
-                <p>Outside of research, I enjoy <span class="highlight">rock climbing, crafting, baking, and creating vlogs</span>. I believe in the transformative value of hands-on creation—whether it's building something from scratch in the kitchen, designing custom crafts, or developing innovative solutions in the lab.</p>
+                <p>Outside of research, I enjoy rock climbing, crafting, baking, and creating vlogs. I believe in the transformative value of hands-on creation—whether it's building something from scratch in the kitchen, designing custom crafts, or developing innovative solutions in the lab.</p>
             </div>
         </div>
     </section>
@@ -818,11 +764,11 @@
             <div class="skill-category fade-in">
                 <h3><span class="skill-icon">🧠</span>AI & Machine Learning</h3>
                 <ul class="skill-list">
-                    <li>Deep Learning (PyTorch, TensorFlow)</li>
-                    <li>Computer Vision & Image Processing</li>
-                    <li>3D Pose Estimation Algorithms</li>
+                    <li>Deep Learning</li>
+                    <li>Computer Vision</li>
+                    <li>3D Pose Estimation</li>
+                    <li>Video Processing</li>
                     <li>Medical Image Analysis</li>
-                    <li>Neural Network Architecture Design</li>
                 </ul>
             </div>
             
@@ -840,11 +786,11 @@
             <div class="skill-category fade-in">
                 <h3><span class="skill-icon">⚙️</span>Technical Stack</h3>
                 <ul class="skill-list">
-                    <li>Python (Primary Research Language)</li>
-                    <li>OpenCV & Medical Imaging Libraries</li>
-                    <li>MATLAB & Signal Processing</li>
-                    <li>Cloud Computing (AWS, GCP)</li>
-                    <li>Version Control & Collaborative Research</li>
+                    <li>Python, Swift, C++</li>
+                    <li>OpenCV, Pytorch</li>
+                    <li>Signal Processing</li>
+                    <li>Cloud Computing</li>
+                    <li>Git</li>
                 </ul>
             </div>
         </div>
