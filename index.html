@@ -97,6 +97,7 @@
             align-items: center;
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
             padding: 0 2rem;
+            padding-top: 100px; /* Add top padding to avoid header overlap */
         }
 
         .hero-content {
@@ -458,9 +459,7 @@
             margin-bottom: 2rem;
             box-shadow: 0 5px 20px var(--shadow);
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 2rem;
+            flex-direction: column;
             transition: var(--transition);
         }
 
@@ -471,6 +470,7 @@
 
         .publication-content {
             flex: 1;
+            margin-bottom: 1rem;
         }
 
         .publication-title {
@@ -507,9 +507,9 @@
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
-            white-space: nowrap;
             text-align: center;
-            min-width: 100px;
+            align-self: flex-start;
+            max-width: 150px;
         }
 
         .publication-status.published {
@@ -675,6 +675,7 @@
 
             .hero {
                 padding: 0 1rem;
+                padding-top: 120px; /* Extra padding for mobile */
             }
 
             .nav {
@@ -704,8 +705,8 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span class="typewriter">Sophie Shi</span></h1>
-                <p class="subtitle">PhD Candidate • AI Health Researcher</p>
-                <p>I'm revolutionizing healthcare through artificial intelligence, specializing in computer vision and 3D pose estimation for automated epilepsy diagnostics. Based at Duke University, I develop AI systems that transform routine medical recordings into intelligent diagnostic tools.</p>
+                <p class="subtitle">PhD Candidate • AI Healthcare Researcher</p>
+                <p>I'm revolutionizing healthcare through artificial intelligence, specializing in computer vision and 3D pose estimation for automated epilepsy diagnostics. Based at Duke University in Durham, NC, I develop AI systems that transform routine medical recordings into intelligent diagnostic tools.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -746,13 +747,11 @@
             </div>
             
             <div class="about-text">
-                <p>I'm a <span class="highlight">PhD candidate in Biomedical Engineering in Tim Dunn Lab at Duke University</span>, driven by a mission to revolutionize healthcare through artificial intelligence.</p>
+                <p>I'm a <span class="highlight">PhD candidate in Biomedical Engineering at Duke University</span>, driven by a mission to revolutionize healthcare through artificial intelligence. With a Master's in Biomedical Engineering from Duke and a Bachelor's in Bioengineering from Zhejiang University, I specialize in bridging cutting-edge AI technology with critical medical applications.</p>
                 
                 <p>My research focuses on developing <span class="highlight">automated epilepsy diagnostic tools</span> using computer vision and 3D pose estimation from standard clinical videos. I've created systems that detect subtle seizure-related movement patterns invisible to clinical observation, transforming routine medical recordings into intelligent diagnostic tools. Working closely with Duke's premier clinical teams, I also architect medical software platforms that integrate patient databases with AI-powered diagnostic systems for seamless clinical deployment.</p>
                 
-                <p>I'm driven to <span class="highlight">leverage AI for meaningful healthcare impact</span> — where every algorithm has the potential to save lives and every innovation can make a meaningful difference in patient outcomes.</p>
-                
-                <p>Outside of research, I enjoy rock climbing, crafting, baking, and creating vlogs. I believe in the transformative value of hands-on creation—whether it's building something from scratch in the kitchen, designing custom crafts, or developing innovative solutions in the lab.</p>
+                <p>Outside of research, I enjoy <span class="highlight">rock climbing, crafting, baking, and creating vlogs</span>. I believe in the transformative value of hands-on creation—whether it's building something from scratch in the kitchen, designing custom crafts, or developing innovative solutions in the lab.</p>
             </div>
         </div>
     </section>
@@ -764,11 +763,11 @@
             <div class="skill-category fade-in">
                 <h3><span class="skill-icon">🧠</span>AI & Machine Learning</h3>
                 <ul class="skill-list">
-                    <li>Deep Learning</li>
-                    <li>Computer Vision</li>
-                    <li>3D Pose Estimation</li>
-                    <li>Video Processing</li>
+                    <li>Deep Learning (PyTorch, TensorFlow)</li>
+                    <li>Computer Vision & Image Processing</li>
+                    <li>3D Pose Estimation Algorithms</li>
                     <li>Medical Image Analysis</li>
+                    <li>Neural Network Architecture Design</li>
                 </ul>
             </div>
             
@@ -786,11 +785,11 @@
             <div class="skill-category fade-in">
                 <h3><span class="skill-icon">⚙️</span>Technical Stack</h3>
                 <ul class="skill-list">
-                    <li>Python, Swift, C++</li>
-                    <li>OpenCV, Pytorch</li>
-                    <li>Signal Processing</li>
-                    <li>Cloud Computing</li>
-                    <li>Git</li>
+                    <li>Python (Primary Research Language)</li>
+                    <li>OpenCV & Medical Imaging Libraries</li>
+                    <li>MATLAB & Signal Processing</li>
+                    <li>Cloud Computing (AWS, GCP)</li>
+                    <li>Version Control & Collaborative Research</li>
                 </ul>
             </div>
         </div>
@@ -843,7 +842,7 @@
                         Developed joint compression-classification network using ResNet architecture for EEG seizure prediction. Implemented adaptive reconstruction module with linear pooling under variable compression ratios for enhanced prediction accuracy.
                     </p>
                     <div class="project-links">
-                        <a href="cnn-seizure-prediction.html" class="project-link link-github">Details</a>
+                        <a href="#" class="project-link link-github">Details</a>
                     </div>
                 </div>
             </div>
@@ -859,7 +858,7 @@
                         Built virtual machine-based RESTful API server and client with persistent database integration. Developed client GUI and monitor-end GUI applications for medical record and real-time patient monitoring.
                     </p>
                     <div class="project-links">
-                        <a href="ecg-monitoring-system.html" class="project-link link-github">Details</a>
+                        <a href="#" class="project-link link-github">Details</a>
                     </div>
                 </div>
             </div>
@@ -875,7 +874,7 @@
                         Designed multi-view iOS/WatchOS mobile application for deadline management using SwiftUI and UIKit. Integrated cross-device real-time synchronization via iCloud and Firebase, with Sakai API integration for automatic course assignment deadlines.
                     </p>
                     <div class="project-links">
-                        <a href="ios-deadline-manager.html" class="project-link link-github">Details</a>
+                        <a href="https://github.com/Sooophy/DeadlineMGR" class="project-link link-github">Details</a>
                     </div>
                 </div>
             </div>
