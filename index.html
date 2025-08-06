@@ -355,6 +355,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            align-items: stretch;
         }
 
         .project-card {
@@ -363,6 +364,8 @@
             overflow: hidden;
             box-shadow: 0 5px 20px var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -375,6 +378,7 @@
             color: var(--white);
             padding: 1.5rem;
             position: relative;
+            min-height: 130px;
         }
 
         .project-header::after {
@@ -400,11 +404,15 @@
 
         .project-body {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-description {
             color: var(--text-light);
             margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
         .project-links {
@@ -747,11 +755,11 @@
             </div>
             
             <div class="about-text">
-                <p>I'm a <span class="highlight">PhD candidate</span> in Biomedical Engineering at Duke University in <a href="https://www.tdunnlab.org/" target="_blank">Tim Dunn Lab</a>, driven by a mission to revolutionize healthcare through artificial intelligence.</p>
+                <p>I'm a <span class="highlight">PhD candidate</span> in Biomedical Engineering at Duke University in <a href="https://www.tdunnlab.org/" target="_blank">Tim Dunn Lab</a>, dedicated to using artificial intelligence to drive innovation and improve lives across domains.</p>
                 
-                <p>My research focuses on developing automated epilepsy diagnostic tools using <span class="highlight">computer vision and 3D pose estimation</span> from standard clinical videos. I've created systems that detect subtle seizure-related movement patterns invisible to clinical observation, transforming routine medical recordings into intelligent diagnostic tools. Working closely with Duke's premier clinical teams, I also architect <span class="highlight">medical software platforms</span> that integrate patient databases with AI-powered diagnostic systems for seamless clinical deployment.</p>
+                <p>My research focuses on developing automated epilepsy diagnostic tools using <span class="highlight">computer vision and 3D pose estimation</span> from standard clinical videos. I am creating systems that detect subtle seizure-related movement patterns invisible to clinical observation, transforming routine medical recordings into intelligent diagnostic tools. With a strong interest in <span class="highlight">AI-driven software engineering</span>, I enjoy designing intelligent systems that connect data with real-world decision-making—and I'm always <span class="highlight">open to learning new skills</span> that push the boundaries of what I can build.</p>
                 
-                <p>Outside of research, I enjoy rock climbing, crafting, baking, and creating vlogs. I believe in the transformative value of <span class="highlight">hands-on creation</span>—whether it's building something from scratch in the kitchen, designing medical device, or developing innovative solutions in the lab.</p>
+                <!-- <p>Outside of research, I enjoy rock climbing, crafting, baking, and creating vlogs. I believe in the transformative value of <span class="highlight">hands-on creation</span>—whether it's building something from scratch in the kitchen, designing medical device, or developing innovative solutions in the lab.</p> -->
             </div>
         </div>
     </section>
@@ -802,7 +810,7 @@
             <!-- *** PROJECT 1 - AUTO-EVALUATION SYSTEM FOR EPILEPSY - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Auto-evaluation System for Epilepsy Behaviors Based on Videos</h3>
+                    <h3 class="project-title">A Multimodal System for Epilepsy Semiology Detection and Surgical Assistance</h3>
                     <p class="project-tech">Computer Vision • 3D Pose Estimation • LLM Integration • Video Processing</p>
                 </div>
                 <div class="project-body">
@@ -818,7 +826,7 @@
             <!-- *** PROJECT 2 - DEEP LEARNING FOR POST-STROKE ANALYSIS - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Deep Learning for Post-Stroke Behavioral Analysis</h3>
+                    <h3 class="project-title">Automated Stroke Behavior Profiling Using 3D Pose Estimation and Deep Learning</h3>
                     <p class="project-tech">Computer Vision • 3D Pose Estimation • Computational Ethology</p>
                 </div>
                 <div class="project-body">
@@ -834,7 +842,7 @@
             <!-- *** PROJECT 3 - CNN-BASED EPILEPSY SEIZURE PREDICTION - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Compressive Epileptic Seizure Prediction System</h3>
+                    <h3 class="project-title">Joint Compression and Classification Network for Epilepsy Seizure Prediction</h3>
                     <p class="project-tech">Data Compression • Deep Learning • Signal Processing</p>
                 </div>
                 <div class="project-body">
@@ -842,7 +850,7 @@
                         Developed joint compression-classification network using ResNet architecture for EEG seizure prediction. Implemented adaptive reconstruction module with under variable compression ratios for enhanced prediction accuracy.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="project-link link-github">Details</a>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h4bqdvIAAAAJ&citation_for_view=h4bqdvIAAAAJ:u-x6o8ySG0sC" class="project-link link-github">Details</a>
                     </div>
                 </div>
             </div>
@@ -850,7 +858,7 @@
             <!-- *** PROJECT 4 - ECG MONITORING SYSTEM - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Patient Electrocardiogram (ECG) Monitoring System</h3>
+                    <h3 class="project-title">Real-Time ECG Monitoring System with Cloud Server and GUI Interfaces</h3>
                     <p class="project-tech">RESTful API • Cloud Server • Database Integration • GUI Design • Unit Test</p>
                 </div>
                 <div class="project-body">
@@ -866,7 +874,7 @@
             <!-- *** PROJECT 5 - IOS DEADLINE MANAGER APP - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">iOS Deadline Manager App Development</h3>
+                    <h3 class="project-title">Deadline Manager: A Cross-Platform iOS and WatchOS App for Smart Deadline Tracking</h3>
                     <p class="project-tech">SwiftUI • UIKit • iCloud • Firebase • Sakai API • Mobile App Development</p>
                 </div>
                 <div class="project-body">
@@ -949,7 +957,7 @@
                     <div class="contact-icon">📍</div>
                     <div>
                         <strong>Location</strong><br>
-                        Durham, NC
+                        Durham, NC / Seattle, WA
                     </div>
                 </div>
                 
