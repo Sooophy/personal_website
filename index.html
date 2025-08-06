@@ -355,6 +355,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            align-items: stretch;
         }
 
         .project-card {
@@ -363,6 +364,8 @@
             overflow: hidden;
             box-shadow: 0 5px 20px var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -375,6 +378,7 @@
             color: var(--white);
             padding: 1.5rem;
             position: relative;
+            min-height: 130px;
         }
 
         .project-header::after {
@@ -400,11 +404,15 @@
 
         .project-body {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-description {
             color: var(--text-light);
             margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
         .project-links {
@@ -802,7 +810,7 @@
             <!-- *** PROJECT 1 - AUTO-EVALUATION SYSTEM FOR EPILEPSY - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Auto-evaluation System for Epilepsy Behaviors Based on Videos</h3>
+                    <h3 class="project-title">A Multimodal System for Epilepsy Semiology Detection and Surgical Assistance</h3>
                     <p class="project-tech">Computer Vision • 3D Pose Estimation • LLM Integration • Video Processing</p>
                 </div>
                 <div class="project-body">
@@ -818,7 +826,7 @@
             <!-- *** PROJECT 2 - DEEP LEARNING FOR POST-STROKE ANALYSIS - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Deep Learning for Post-Stroke Behavioral Analysis</h3>
+                    <h3 class="project-title">Automated Stroke Behavior Profiling Using 3D Pose Estimation and Deep Learning</h3>
                     <p class="project-tech">Computer Vision • 3D Pose Estimation • Computational Ethology</p>
                 </div>
                 <div class="project-body">
@@ -834,7 +842,7 @@
             <!-- *** PROJECT 3 - CNN-BASED EPILEPSY SEIZURE PREDICTION - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Compressive Epileptic Seizure Prediction System</h3>
+                    <h3 class="project-title">Joint Compression and Classification Network for Epilepsy Seizure Prediction</h3>
                     <p class="project-tech">Data Compression • Deep Learning • Signal Processing</p>
                 </div>
                 <div class="project-body">
@@ -842,7 +850,7 @@
                         Developed joint compression-classification network using ResNet architecture for EEG seizure prediction. Implemented adaptive reconstruction module with under variable compression ratios for enhanced prediction accuracy.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="project-link link-github">Details</a>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h4bqdvIAAAAJ&citation_for_view=h4bqdvIAAAAJ:u-x6o8ySG0sC" class="project-link link-github">Details</a>
                     </div>
                 </div>
             </div>
@@ -850,7 +858,7 @@
             <!-- *** PROJECT 4 - ECG MONITORING SYSTEM - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">Patient Electrocardiogram (ECG) Monitoring System</h3>
+                    <h3 class="project-title">Real-Time ECG Monitoring System with Cloud Server and GUI Interfaces</h3>
                     <p class="project-tech">RESTful API • Cloud Server • Database Integration • GUI Design • Unit Test</p>
                 </div>
                 <div class="project-body">
@@ -866,7 +874,7 @@
             <!-- *** PROJECT 5 - IOS DEADLINE MANAGER APP - HIGHLIGHTED WITH COMMENTS *** -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">iOS Deadline Manager App Development</h3>
+                    <h3 class="project-title">Deadline Manager: A Cross-Platform iOS and WatchOS App for Smart Deadline Tracking</h3>
                     <p class="project-tech">SwiftUI • UIKit • iCloud • Firebase • Sakai API • Mobile App Development</p>
                 </div>
                 <div class="project-body">
